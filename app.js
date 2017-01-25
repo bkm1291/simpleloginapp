@@ -17,9 +17,9 @@ function store() {
 	// Stores input from register-form
     localStorage.setItem('name', regUser.value);
     localStorage.setItem('pw', regPw.value);
-	console.log('Username:' + name +  ' '  + 'Password:' + pw + " are stored in local storage");
+	console.log('Username:' + name +  ' '  + 'Password:' + pw + ' are stored in local storage');
 	//resets form on button click//
-	document.getElementById("register-form").reset();
+	document.getElementById('register-form').reset();
     	
 }
 
@@ -33,16 +33,16 @@ function check() {
     // Stored data from the register-form
     var storedName = localStorage.getItem('name');
     var storedPw = localStorage.getItem('pw');
-    console.log(storedName + storedPw + "found in local storage");
+    console.log(storedName + storedPw + 'found in local storage');
 	// Stores inputs from the login-form in variables
 	var loginName = document.getElementById('lgnUser').value;
 	var loginPw = document.getElementById('lgnPw').value;	
-	console.log(loginName + loginPw + " attempts to login");
+	console.log(loginName + loginPw + ' attempts to login');
 	  //resets form on button click//
-	  document.getElementById("login-form").reset();
+	  document.getElementById('login-form').reset();
     // Checks if inputted data from login-form is equal to stored data from the register-form 
 	if(loginName === storedName && loginPw === storedPw) {
-	        alert('Welcome back ' + loginName + ". You are logged in.");
+	        alert('Welcome back ' + loginName + ' You are logged in.');
 	    } else {
 	        alert('Error - you are not registered. Please register above.');
 
